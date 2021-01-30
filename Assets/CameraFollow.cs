@@ -16,12 +16,12 @@ public class CameraFollow : MonoBehaviour
     void start()
     {
         //Centers camera on ball
-        Vector3 centerPos = Camera.main.ViewportToWorldPoint(new Vector3(ball.position.x, ball.position.x, platformZ.position.z));
+        Vector3 centerPos = Camera.main.ViewportToWorldPoint(new Vector3(ball.position.x, ball.position.y, platformZ.position.z));
         transform.position = centerPos;
     }
 
     // Update is called in line with the amount of physics frames
-    void FixedUpdate()
+    void Update()
     {
         //Moves camera to ball's current coordinates
 
@@ -30,7 +30,7 @@ public class CameraFollow : MonoBehaviour
          * Z-value is always set to the platform's, since it is the 'deepest' layer. 
          * Ensures that all game objects are shown on camera. 
          */
-        Vector3 ballPos = new Vector3(ball.position.x, ball.position.x, platformZ.position.z);
+        Vector3 ballPos = new Vector3(ball.position.x, ball.position.y, platformZ.position.z);
         transform.position = ballPos;
     }
 }
