@@ -1290,6 +1290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSound: {fileID: 298987596}
+  maxSpeed: 5
 --- !u!114 &1821902354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1706,7 +1707,7 @@ PrefabInstance:
     - target: {fileID: 7586265688657700898, guid: 46c44a573eeb9ad42baa9f2a142937c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.4570312
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7586265688657700898, guid: 46c44a573eeb9ad42baa9f2a142937c2,
         type: 3}
