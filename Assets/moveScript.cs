@@ -7,7 +7,7 @@ public class moveScript : MonoBehaviour
     //Public variables
     public AudioSource hitSound;
     //Private variables
-    private float waitTime = 0.5f;
+    private float waitTime = 0.8f;
     private float timer = 0.0f;
     // Start is called before the first frame update
     void Start()
