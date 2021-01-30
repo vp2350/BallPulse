@@ -41,7 +41,7 @@ public class SliderManager : MonoBehaviour
     private void updateHorizontal()
     {
         transform.position += new Vector3(delta * Time.deltaTime * negater, 0.0f, 0.0f);
-        if(transform.position.y > startingPos.y + delta || transform.position.y < startingPos.y - delta)
+        if(transform.position.x > startingPos.x + delta || transform.position.x < startingPos.x - delta)
         {
             negater = -negater;
         }
@@ -50,7 +50,7 @@ public class SliderManager : MonoBehaviour
     private void updateVertical()
     {
         transform.position += new Vector3(0.0f, delta * Time.deltaTime * negater, 0.0f);
-        if (transform.position.x > startingPos.x + delta || transform.position.x < startingPos.x - delta)
+        if (transform.position.y > startingPos.y + delta || transform.position.y < startingPos.y - delta)
         {
             negater = -negater;
         }
