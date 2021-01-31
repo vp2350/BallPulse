@@ -13,12 +13,13 @@ public class SliderManager : MonoBehaviour
     private int negater;
     private Vector2 startingPos;
     private float delta;
+    private Rigidbody2D rigidbody;
     void Start()
     {
         negater = 1; //Turns negative when platform needs to turn.
         delta = range / speed; //How far the platform moves in one second.
         startingPos = transform.position; //Store starting position for measurement.
-
+        rigidbody = this.GetComponent<Rigidbody2D>();
         if(horizontal) //Rotate platform if needed.
         {
             transform.Rotate(0.0f, 0.0f, 90.0f, Space.World);
@@ -26,7 +27,7 @@ public class SliderManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(horizontal)
         {
@@ -40,7 +41,7 @@ public class SliderManager : MonoBehaviour
 
     private void updateHorizontal()
     {
-        transform.position += new Vector3(delta * Time.deltaTime * negater, 0.0f, 0.0f);
+        rigidbody.MovePosition(transform.position + new Vector3(delta * Time.deltaTime * negater, 0.0f, 0.0f));
         if(transform.position.x  + delta * Time.deltaTime * negater > startingPos.x + range || transform.position.x + delta * Time.deltaTime * negater < startingPos.x - range)
         {
             negater = -negater;
@@ -49,7 +50,7 @@ public class SliderManager : MonoBehaviour
 
     private void updateVertical()
     {
-        transform.position += new Vector3(0.0f, delta * Time.deltaTime * negater, 0.0f);
+        rigidbody.MovePosition(transform.position + new Vector3(0.0f, delta * Time.deltaTime * negater, 0.0f));
         if (transform.position.y + delta * Time.deltaTime * negater > startingPos.y + range || transform.position.y  + delta * Time.deltaTime * negater < startingPos.y - range)
         {
             negater = -negater;
