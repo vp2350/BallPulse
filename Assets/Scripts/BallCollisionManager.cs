@@ -36,8 +36,12 @@ public class BallCollisionManager : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("LevelTwo");
         }
+        if (collision.gameObject.tag == "EndGoal")
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("EndScreen");
+        }
 
-        if(collision.gameObject.tag == "Hazard")
+        if (collision.gameObject.tag == "Hazard")
         {
             //resets the ball's position
             gameObject.GetComponent<moveScript>().enabled = true;
