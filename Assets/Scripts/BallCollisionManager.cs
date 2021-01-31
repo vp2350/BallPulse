@@ -34,7 +34,7 @@ public class BallCollisionManager : MonoBehaviour
 
         if (collision.gameObject.tag == "Goal") 
         {
-            //Advance to next scene / level
+            UnityEngine.SceneManagement.SceneManager.LoadScene("LevelTwo");
         }
 
         if(collision.gameObject.tag == "Hazard")
