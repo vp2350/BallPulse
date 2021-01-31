@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class BallCollisionManager : MonoBehaviour
 {
+    public Transform ball; 
+    public Vector3 initialPos; 
+   
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        //storing ball's position at the start of the level. 
+        initialPos =  new Vector3(ball.position.x, ball.position.y,
+            ball.position.z); 
     }
 
     // Update is called once per frame
@@ -18,14 +24,26 @@ public class BallCollisionManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Goal") //Stops ball from moving and simulating physics.
-        {
-            Rigidbody2D rigidbody = gameObject.GetComponent<Rigidbody2D>();
+        //Stops ball from moving and simulating physics.
+        Rigidbody2D rigidbody = gameObject.GetComponent<Rigidbody2D>();
 
-            gameObject.GetComponent<moveScript>().enabled = false;
-            rigidbody.bodyType = RigidbodyType2D.Kinematic;
-            rigidbody.velocity = Vector2.zero;
-            rigidbody.angularVelocity = 0.0f;
+        gameObject.GetComponent<moveScript>().enabled = false;
+        rigidbody.bodyType = RigidbodyType2D.Kinematic;
+        rigidbody.velocity = Vector2.zero;
+        rigidbody.angularVelocity = 0.0f;
+
+        if (collision.gameObject.tag == "Goal") 
+        {
+            //Advance to next scene / level
+        }
+
+        if(collision.gameObject.tag == "Hazard")
+        {
+            //resets the ball's position
+            gameObject.GetComponent<moveScript>().enabled = true;
+            rigidbody.bodyType = RigidbodyType2D.Dynamic;
+
+            ball.position = initialPos; 
         }
     }
 }
