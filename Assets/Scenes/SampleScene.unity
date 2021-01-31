@@ -325,12 +325,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 64b7a3774ebe62d4790bb0ef5c70d931, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 48af44234d6b7064291e2a08df7ec792, type: 3}
   m_Color: {r: 0.3207547, g: 0.28898183, b: 0.28898183, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 19.2, y: 12.8}
+  m_DrawMode: 2
+  m_Size: {x: 24.196377, y: 15.581447}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -344,8 +344,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69495959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.205, y: 1.469, z: 0}
-  m_LocalScale: {x: 3.3752482, y: 3.2742798, z: 1}
+  m_LocalPosition: {x: 20.34, y: -4.87, z: 0}
+  m_LocalScale: {x: 3.3385243, y: 4.4778137, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -3118,7 +3118,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.49, y: -3.05, z: -1.1621094}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1426498624}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3135,7 +3136,7 @@ GameObject:
   - component: {fileID: 1423508904}
   m_Layer: 0
   m_Name: heart
-  m_TagString: Untagged
+  m_TagString: EndGoal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3152,7 +3153,7 @@ Transform:
   m_LocalScale: {x: 0.067317665, y: 0.07894267, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1423508903
 SpriteRenderer:
@@ -3291,12 +3292,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426498622}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2895, y: 0.2752, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.20050001, y: 3.3252, z: 0.16210938}
   m_LocalScale: {x: 0.5609659, y: 0.5895983, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1411727190}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1426498625
 MonoBehaviour:
