@@ -6,6 +6,6 @@ public class SceneLoader : MonoBehaviour
 {
     public void loadGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("IntroScene");
     }
 }
